@@ -1,0 +1,20 @@
+.timeline {
+  position: absolute;
+  bottom: 2rem;
+  left: 10rem;
+  width: 18rem;
+  background-color: red;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.timeline__title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 147px;
+  color: white;
+  opacity: 0.5;
+  font-size: 15px;
+  line-height: 24px;
+}

@@ -1,0 +1,7 @@
+.inProgress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-42%, -50%);
+  font-size: 18px;
+}
