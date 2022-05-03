@@ -34,7 +34,7 @@ const data = [
   },
 ];
 
-const ExerciceRadarChart = () => {
+const ExerciceRadarChart = (props) => {
   return (
     <div className="exercice">
       <ResponsiveContainer width="100%" height="100%">

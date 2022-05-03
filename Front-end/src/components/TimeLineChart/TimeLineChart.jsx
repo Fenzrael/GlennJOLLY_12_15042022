@@ -32,7 +32,7 @@ const data = [
   },
 ];
 
-const TimeLineChart = () => {
+const TimeLineChart = (props) => {
   return (
     <div className="timeline">
       <h2 className="timeline__title">Durée moyenne des sessions</h2>

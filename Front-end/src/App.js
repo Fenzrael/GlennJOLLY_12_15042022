@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Community from "./pages/Community";
+import User from './pages/User';
+import Error from "./pages/Error";
 
 
 function App() {
@@ -17,8 +19,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/user/:id" element={<User />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/error" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

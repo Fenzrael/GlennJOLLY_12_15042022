@@ -1,15 +1,15 @@
 import React from "react";
-import ExerciceRadarChart from "../components/ExerciceRadarChart/ExerciceRadarChart";
 import Header from "../components/Header/Header";
+import SelectUser from "../components/SelectUser/SelectUser";
 import Sidebar from "../components/SideBar/Sidebar";
-import TimeLineChart from "../components/TimeLineChart/TimeLineChart";
+import ExerciceRadarChart from "../components/ExerciceRadarChart/ExerciceRadarChart";
 
 const Profile = () => {
   return (
     <div>
       <Header />
       <Sidebar />
-      <TimeLineChart />
+      <SelectUser />
       <ExerciceRadarChart />
     </div>
   );

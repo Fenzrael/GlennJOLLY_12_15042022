@@ -1,0 +1,25 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  transform: translate(4%, 8%);
+}
+
+.user__text {
+  margin-top: 5rem;
+}
+
+.user__link {
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: red;
+  color: black;
+}
+
+.user__link:hover {
+  color: white;
+}
