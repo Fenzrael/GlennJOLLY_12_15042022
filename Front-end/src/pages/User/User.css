@@ -1,0 +1,34 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: 10rem;
+}
+
+.user__presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user__hello {
+  font-size: 48px;
+}
+
+.user__firstName {
+  color: red;
+}
+
+.user__congratulation {
+  margin-left: 0.25%;
+}
+
+.user__chartsDown {
+  width: 835px;
+  height: 263px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}

@@ -1,45 +1,56 @@
 import { LineChart, Line, XAxis, Tooltip } from "recharts";
 import "./TimeLineChart.css";
 
-const data = [
+// Exemple data fournit par recharts
+/* const data = [
   {
     day: "L",
-    time: 24,
+    sessionLength: 24,
   },
   {
     day: "M",
-    time: 13,
+    sessionLength: 13,
   },
   {
     day: "M",
-    time: 98,
+    sessionLength: 98,
   },
   {
     day: "J",
-    time: 39,
+    sessionLength: 39,
   },
   {
     day: "V",
-    time: 48,
+    sessionLength: 48,
   },
   {
     day: "S",
-    time: 38,
+    sessionLength: 38,
   },
   {
     day: "D",
-    time: 43,
+    sessionLength: 43,
   },
-];
+]; */
+
+const CustomToolTip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom__tooltip">
+        <p className="min">{`${payload[0].value} min`}</p>
+      </div>
+    );
+  }
+};
 
 const TimeLineChart = (props) => {
   return (
     <div className="timeline">
       <h2 className="timeline__title">Durée moyenne des sessions</h2>
       <LineChart
-        width={300}
-        height={300}
-        data={data}
+        width={258}
+        height={263}
+        data={props.data}
         margin={{
           top: 5,
           right: 30,
@@ -60,11 +71,12 @@ const TimeLineChart = (props) => {
             strokeOpacity: 0.2,
             strokeWidth: 70,
           }}
+          content={<CustomToolTip />}
         />
         <Line
           type="monotone"
-          dataKey="time"
-          stroke="#8884d8"
+          dataKey="sessionLength"
+          stroke="#fff"
           activeDot={{ r: 8 }}
         />
       </LineChart>

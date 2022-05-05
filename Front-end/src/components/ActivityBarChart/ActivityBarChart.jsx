@@ -1,7 +1,8 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import "./ActivityBarChart.css";
 
-const data = [
+// Exemple data graphique rechart
+/* const data = [
   {
     name: "1",
     kilo: 24,
@@ -52,15 +53,22 @@ const data = [
     kilo: 43,
     calo: 33,
   },
-];
+]; */
 
 const ActivityBarChart = (props) => {
   return (
     <div className="activity">
+      <div className="activity__legend legend">
+        <h4 className="legend__title">Activite Quotidienne</h4>
+        <div className="legend__type type">
+          <p className="type__kg">Poids(kg)</p>
+          <p className="type__kcal">Calories brûlées(kCal)</p>
+        </div>
+      </div>
       <BarChart
-        width={500}
-        height={300}
-        data={data}
+        width={835}
+        height={320}
+        data={props.data}
         margin={{
           top: 5,
           right: 30,
@@ -69,7 +77,7 @@ const ActivityBarChart = (props) => {
         }}
       >
         <CartesianGrid strokeDasharray="3 5" vertical={false} />
-        <XAxis dataKey="name" />
+        <XAxis dataKey="day" />
         <YAxis
           orientation="right"
           axisLine={false}
@@ -78,13 +86,13 @@ const ActivityBarChart = (props) => {
         />
         <Tooltip />
         <Bar
-          dataKey="kilo"
+          dataKey="kilogram"
           fill="#282D30"
           radius={[30, 30, 0, 0]}
           maxBarSize={12}
         />
         <Bar
-          dataKey="calo"
+          dataKey="calories"
           fill="#E60000"
           radius={[30, 30, 0, 0]}
           maxBarSize={12}

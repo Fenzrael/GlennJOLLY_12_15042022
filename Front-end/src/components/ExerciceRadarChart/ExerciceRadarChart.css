@@ -1,10 +1,7 @@
 .exercice {
-  width: 18rem;
-  height: 18rem;
+  /* width: 258px;
+  height: 263px; */
   border-radius: 5px;
   background-color: #282d30;
   border: 1px solid black;
-  position: absolute;
-  bottom: 1rem;
-  left: 30rem;
 }

@@ -3,47 +3,47 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  ResponsiveContainer,
+  PolarRadiusAxis,
 } from "recharts";
 import "./ExerciceRadarChart.css";
-
-const data = [
-  {
-    subject: "Intensité",
-    A: 120,
-  },
-  {
-    subject: "Vitesse",
-    A: 98,
-  },
-  {
-    subject: "Force",
-    A: 86,
-  },
-  {
-    subject: "Endurance",
-    A: 99,
-  },
-  {
-    subject: "Energie",
-    A: 85,
-  },
-  {
-    subject: "Cardio",
-    A: 65,
-  },
-];
 
 const ExerciceRadarChart = (props) => {
   return (
     <div className="exercice">
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="65%" data={data}>
-          <PolarGrid radialLines={false} />
-          <PolarAngleAxis dataKey="subject" stroke="white" tickLine={false} />
-          <Radar name="Mike" dataKey="A" fill="#ff0101" fillOpacity={0.8} />
-        </RadarChart>
-      </ResponsiveContainer>
+      <RadarChart
+        outerRadius={90}
+        width={258}
+        height={263}
+        startAngle={-150}
+        endAngle={210}
+        data={props.data}
+        style={{
+          background: "#282d30",
+          borderRadius: "5px",
+        }}
+      >
+        <PolarGrid radialLines={false} />
+        <PolarAngleAxis
+          dataKey="kind"
+          tick={{
+            fill: "#ffffff",
+            fontSize: "12",
+          }}
+        />
+        <PolarRadiusAxis
+          angle={15}
+          axisLine={false}
+          /* domain={[0, 250]} */
+          tick={false}
+          tickCount={6}
+        />
+        <Radar
+          dataKey="value"
+          stroke="#ff0000"
+          fill="#ff0000"
+          fillOpacity={0.6}
+        />
+      </RadarChart>
     </div>
   );
 };

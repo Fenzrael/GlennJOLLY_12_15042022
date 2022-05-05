@@ -4,9 +4,9 @@
   justify-content: space-around;
   align-items: center;
   width: 8%;
-  height: auto;
+  /* height: 110vh; */
   background-color: black;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

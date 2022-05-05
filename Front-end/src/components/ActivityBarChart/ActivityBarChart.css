@@ -1,6 +1,17 @@
 .activity {
-  position: absolute;
-  top: 12rem;
-  left: 10rem;
+  width: 835px;
   background-color: #fbfbfb;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.legend {
+  padding: 1rem 0 3rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.type {
+  display: flex;
+  justify-content: space-between;
 }

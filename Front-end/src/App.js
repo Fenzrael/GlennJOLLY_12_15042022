@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Community from "./pages/Community";
-import User from './pages/User';
+import User from './pages/User/User';
 import Error from "./pages/Error";
 
 

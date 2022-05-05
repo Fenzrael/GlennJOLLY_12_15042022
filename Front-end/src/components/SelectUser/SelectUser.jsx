@@ -4,16 +4,16 @@ import "./SelectUser.css";
 
 const SelectUser = () => {
   return (
-    <div className="user">
-      <p className="user__text">
+    <div className="selectUser">
+      <p className="selectUser__text">
         Sélectionnez un Utilisateur afin d'étudier ses performances:
       </p>
       <br />
-      <section className="user__container">
-        <Link to="/user/12" className="user__link">
+      <section className="selectUser__container">
+        <Link to="/user/12" className="selectUser__link">
           Karl Dovineau
         </Link>
-        <Link to="/user/18" className="user__link">
+        <Link to="/user/18" className="selectUser__link">
           Cécilia Ratorez
         </Link>
       </section>
