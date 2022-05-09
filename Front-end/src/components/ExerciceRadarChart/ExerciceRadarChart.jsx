@@ -8,32 +8,30 @@ import {
 import "./ExerciceRadarChart.css";
 
 const ExerciceRadarChart = (props) => {
+  console.log(props);
   return (
     <div className="exercice">
+      {/*  Changer position éléments: comme on est sur un hexagone on modifie les valeurs des angles par 60 degrés (stArtAngle etant par defaut sur 90°, ET endAngle sur 270°) */}
       <RadarChart
-        outerRadius={90}
+        outerRadius={100}
         width={258}
         height={263}
         startAngle={-150}
         endAngle={210}
         data={props.data}
-        style={{
-          background: "#282d30",
-          borderRadius: "5px",
-        }}
       >
         <PolarGrid radialLines={false} />
         <PolarAngleAxis
           dataKey="kind"
           tick={{
-            fill: "#ffffff",
-            fontSize: "12",
+            fill: "#fff",
+            fontSize: "10",
+            fontWeight: "bold",
           }}
         />
         <PolarRadiusAxis
           angle={15}
           axisLine={false}
-          /* domain={[0, 250]} */
           tick={false}
           tickCount={6}
         />

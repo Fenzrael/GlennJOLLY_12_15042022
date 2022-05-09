@@ -1,6 +1,6 @@
 .user {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 1rem;
@@ -31,4 +31,10 @@
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
+}
+
+.user__data {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
