@@ -8,7 +8,9 @@ You must install:
 * Clone this repository.
 * Open it in your prefered edit file application (Visual Studio, ...etc).
 ## III - Launching Api Back-end(edited by Openclassroom):
-> You can visit: https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard or read file Readme of folder Back-end.
+> You can visit: https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard or read file `Readme` of folder Back-end.
+>----
+>`Commandes Terminal:`
 >----
 1. `cd Back-end`: for redirection to the Back-end folder.
 2. `npm -i install`: for installation of the dependencies.
@@ -17,4 +19,4 @@ You must install:
 ## IV - Launching Front-end:
 > Read `readme` into the folder Front-end
 > ----
-
+1. `cd Front-end`: for redirection to the Back-end folder.
