@@ -1,33 +1,54 @@
+// import utilitaires
 import { useParams } from "react-router-dom";
 import { useRequestDatas } from "../../services/apiService";
+import { useEffect, useState } from "react";
+import "./User.css";
+
+// import des differents graphes et des composants de la page utilisateur
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/SideBar/Sidebar";
 import ActivityBarChart from "../../components/ActivityBarChart/ActivityBarChart";
 import TimeLineChart from "../../components/TimeLineChart/TimeLineChart";
-import "./User.css";
 import ExerciceRadarChart from "../../components/ExerciceRadarChart/ExerciceRadarChart";
 import ScoreRadialBarChart from "../../components/ScoreRadialBarChart/ScoreRadialBarChart";
 import KeyDataCard from "../../components/KeyDataCard/KeyDataCard";
-import { useEffect, useState } from "react";
+
+/**
+ * User Page rendered by click on the user button
+ * @returns Charts for User selected and Private Details
+ */
 
 const User = () => {
+  // recherche utilisateur par id
   const { id } = useParams();
-  const { data, isLoading, error } = useRequestDatas(id);
+
+  // destructuring pour incorporer les datas le loader et les erreurs du fichier service
+  const { data /*, isLoading, error  */ } = useRequestDatas(id);
+
+  // etat des performances utilisateurs
   const [performUserData, setPerformUserData] = useState({});
-
   const performUser = data.perform?.data;
-
   const kindObj = data.perform?.kind;
 
-  const firstName = data.user?.userInfos.firstName; // ici on va chercher le prenom
-  const keyData = data.user?.keyData;
+  // variable capturant les details des cartes Utilisateur
+  const calorieCountUser = data.user?.keyData.calorieCount;
+  const proteinCountUser = data.user?.keyData.proteinCount;
+  const carbohydrateCountUser = data.user?.keyData.carbohydrateCount;
+  const lipidCountUser = data.user?.keyData.lipidCount;
 
+  // prenom utilisateur
+  const firstName = data.user?.userInfos.firstName; // ici on va chercher le prenom
+
+  // incorporation des end points average et activity
   const averageUser = data.average?.sessions;
   const activityUser = data.activity?.sessions;
+
+  // Pourcentage score utilisateur
   const todayScore = data.user?.todayScore;
   const percentageUser = todayScore * 100;
 
   // UseEffect verifiant si les données requises(kindObj, performUser, ...etc) sont disponibles
+  // remplacement du numero de l'objet kind(kindObj) fournit grace au endpoint backend performance par le mot de l'activité correspondante (performUser)
   useEffect(() => {
     if (!kindObj || !performUser) {
       return;
@@ -71,24 +92,38 @@ const User = () => {
           {/* container des graphique du bas(timeline, score, exercice) */}
           <div className="user__chartsDown">
             <TimeLineChart data={averageUser} />
-            <ExerciceRadarChart
-              data={performUserData}
-              /* tickFormatter={kindNumToWord} */
+            <ExerciceRadarChart data={performUserData} />
+            <ScoreRadialBarChart
+              data={percentageUser}
+              percentage={percentageUser + "%"}
             />
-            <ScoreRadialBarChart data={percentageUser} />
           </div>
         </div>
         <div className="user__data keyData part__right">
           <KeyDataCard
             nameKeyData="calorieCount"
-            /* count={}  */ unity="KCal"
+            count={calorieCountUser}
+            unity="KCal"
+            type="Calories"
           />
-          <KeyDataCard nameKeyData="proteinCount" /* count={}  */ unity="g" />
+          <KeyDataCard
+            nameKeyData="proteinCount"
+            count={proteinCountUser}
+            unity="g"
+            type="Protéines"
+          />
           <KeyDataCard
             nameKeyData="carbohydrateCount"
-            /* count={}  */ unity="g"
+            count={carbohydrateCountUser}
+            unity="g"
+            type="Glucides"
           />
-          <KeyDataCard nameKeyData="lipidCount" /* count={}  */ unity="g" />
+          <KeyDataCard
+            nameKeyData="lipidCount"
+            count={lipidCountUser}
+            unity="g"
+            type="Lipides"
+          />
         </div>
       </section>
     </div>

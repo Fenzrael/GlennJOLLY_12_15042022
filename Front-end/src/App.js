@@ -6,8 +6,13 @@ import Community from "./pages/Community";
 import User from './pages/User/User';
 import Error from "./pages/Error";
 
+/**
+ * Router Creation with React Router Dom
+ * @returns Different Path possibilities
+ */
 
 function App() {
+  // exemple requete fetch
   /* async function request (id) {
     const response = await fetch (`http://localhost:3000/user/${id}` );
     const data = await response.json();
@@ -22,7 +27,7 @@ function App() {
         <Route path="/user/:id" element={<User />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/error" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

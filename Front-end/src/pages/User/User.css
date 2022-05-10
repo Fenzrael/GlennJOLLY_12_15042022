@@ -1,10 +1,8 @@
 .user {
   display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 1rem;
-  margin-left: 10rem;
+  margin-left: 8rem;
 }
 
 .user__presentation {
@@ -26,7 +24,7 @@
 }
 
 .user__chartsDown {
-  width: 835px;
+  /* width: 835px; */
   height: 263px;
   display: flex;
   justify-content: space-between;
@@ -37,4 +35,29 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.part__left {
+  width: 68%;
+}
+
+.part__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95vh;
+  margin-top: 6.2rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .user {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-left: 6rem;
+  }
+
+  .part__right {
+    height: 89vh;
+  }
 }

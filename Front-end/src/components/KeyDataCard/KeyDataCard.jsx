@@ -1,4 +1,4 @@
-import React from "react";
+import "./KeyDataCard.css";
 
 const KeyDataCard = (props) => {
   return (
@@ -7,6 +7,7 @@ const KeyDataCard = (props) => {
         <img
           src={`../img/${props.nameKeyData}_icon.png`}
           alt={`"${props.nameKeyData}"`}
+          className="keyData__icon"
         />
       </div>
       <div className="card__details details">

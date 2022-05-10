@@ -1,4 +1,11 @@
 .exercice {
+  width: 33%;
   border-radius: 5px;
   background-color: #282d30;
+}
+
+@media screen and (max-width: 1025px) {
+  .exercice {
+    width: 33%;
+  }
 }

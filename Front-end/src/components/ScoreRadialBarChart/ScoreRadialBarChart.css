@@ -1,7 +1,32 @@
-.result {
-  width: 258px;
+.score {
+  width: 33%;
   background-color: #fbfbfb;
   border-radius: 5px;
   overflow: hidden;
   z-index: -5;
+  position: relative;
+}
+
+.score__percentage {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+}
+
+.percentage__total {
+  font-weight: bold;
+}
+
+.percentage__describe {
+  color: #282d30;
+  position: absolute;
+  left: -40%;
+  width: 120px;
+}
+
+@media screen and (max-width: 1025px) {
+  .score__percentage {
+    left: 41%;
+    top: 50%;
+  }
 }

@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+/**
+ * Custom Hook creation for requests BackEnd Datas
+ * @param { Function } path Path getting by User Id
+ * @returns {(Objects | data and Boolean)} data, isLoading, error
+ */
+
 export function useRequestDatas (path){
     // 3 variables d'etat (données, chargement, erreurs)
     const [data, setData] = useState({});

@@ -2,6 +2,11 @@ import React from "react";
 import Header from "../components/Header/Header";
 import Sidebar from "../components/SideBar/Sidebar";
 
+/**
+ * Error Page
+ * @returns JSX + Components React
+ */
+
 const Error = () => {
   const errorStyle = {
     display: "flex",

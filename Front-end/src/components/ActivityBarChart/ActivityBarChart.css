@@ -1,5 +1,5 @@
 .activity {
-  width: 835px;
+  width: 100%;
   background-color: #fbfbfb;
   overflow: hidden;
   border-radius: 5px;
@@ -12,6 +12,25 @@
 }
 
 .type {
+  width: 30%;
+  margin-right: 1rem;
   display: flex;
   justify-content: space-between;
+}
+
+.tooltip {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+}
+
+.tooltip__kg,
+.tooltip__kcal {
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .type {
+    width: 280px;
+  }
 }

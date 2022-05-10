@@ -1,6 +1,6 @@
 .timeline {
   position: relative;
-  /* width: 16rem; */
+  width: 33%;
   background-color: red;
   border-radius: 5px;
   overflow: hidden;
