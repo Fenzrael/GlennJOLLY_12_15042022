@@ -25,6 +25,6 @@ You must install:
 2. `npm -i install` for installation of the dependencies.
 3. `npm start` for run the React Front App.
 ### Finalization:
-> Deployment In Development
+> Deployment In Future Development
 > ----
 
