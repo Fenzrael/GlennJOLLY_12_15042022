@@ -9,5 +9,6 @@ You must install:
 * Open it in your prefered edit file application (Visual Studio, ...etc).
 ## III - Launching Api Back-end(edited by Openclassroom):
 > You can visit: https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard or read file Readme of folder Back-end.
+----
 
 
