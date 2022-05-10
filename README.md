@@ -14,9 +14,17 @@ You must install:
 >----
 1. `cd Back-end`: for redirection to the Back-end folder.
 2. `npm -i install`: for installation of the dependencies.
-3. `npm start`: for launch Api Back-end on the port `3000` http://localhost:3000.
+3. `yarn dev`: for launch Api Back-end on the port `3000` http://localhost:3000.
 4. `4 endpoints`: read readme back-end or the apiServices.js(on Front-end folder) `Ex:`http://localhost:3000/user/12
 ## IV - Launching Front-end:
 > Read `readme` into the folder Front-end
 > ----
-1. `cd Front-end`: for redirection to the Back-end folder.
+>`Commandes Terminal:`
+>----
+1. `cd Front-end`: for redirection to the Front-end folder.
+2. `npm -i install` for installation of the dependencies.
+3. `npm start` for run the React Front App.
+### Finalization:
+> Deployment In Development
+> ----
+
