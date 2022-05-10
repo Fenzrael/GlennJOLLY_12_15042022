@@ -15,6 +15,6 @@ You must install:
 3. `npm start`: for launch Api Back-end on the port `3000` http://localhost:3000.
 4. `4 endpoints`: read readme back-end or the apiServices.js(on Front-end folder) `Ex:`http://localhost:3000/user/12
 ## IV - Launching Front-end:
-> Read readme into the folder Front-end
+> Read `readme` into the folder Front-end
 > ----
 
