@@ -13,5 +13,5 @@ You must install:
 1. `cd Back-end`: for redirection to the Back-end folder.
 2. `npm -i install`: for installation of the dependencies.
 3. `npm start`: for launch Api Back-end on the port `3000` http://localhost:3000.
-4. `4 endpoints`: read readme back-end or the apiServices.js(on Front-end folder) `Ex:`http://localhost:3000/user
+4. `4 endpoints`: read readme back-end or the apiServices.js(on Front-end folder) `Ex:`http://localhost:3000/user/12
 
