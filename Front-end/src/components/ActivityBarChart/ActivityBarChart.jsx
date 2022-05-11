@@ -14,7 +14,7 @@ import "./ActivityBarChart.css";
  * Custom Tooltip for hover informations(kg / kcal)
  * @param { boolean } active Boolean check hover is true or false
  * @param { array } payload Array wich contains datas of payload
- * @returns
+ * @returns {JSX|Components} Return of required JSX and Components
  */
 
 // custom tooltip pour la legende au survol(kg et kcal)
