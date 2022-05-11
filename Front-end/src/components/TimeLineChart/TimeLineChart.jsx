@@ -2,6 +2,13 @@ import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 import PropTypes from "prop-types";
 import "./TimeLineChart.css";
 
+/**
+ * Custom Tooltip for hover informations(min)
+ * @param { boolean } active Boolean check hover is true or false
+ * @param { array } payload Array wich contains datas of payload
+ * @returns
+ */
+
 // tooltip personnalise permettant d'avoir la dureee des sessions en minutes fond rouge couleur blanche
 const CustomToolTip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -17,6 +24,12 @@ CustomToolTip.propTypes = {
   active: PropTypes.bool,
   payload: PropTypes.array,
 };
+
+/**
+ * Chart with Line who represent the time of Sport sessions
+ * @param {array} data Array with relative datas
+ * @returns {JSX|Components} Return of required JSX and Components
+ */
 
 const TimeLineChart = (props) => {
   return (
