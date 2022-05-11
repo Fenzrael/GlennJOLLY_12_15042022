@@ -1,5 +1,10 @@
 import "./LogoHeader.css";
 
+/**
+ * Render logo of the enterprise
+ * @returns {JSX} Return of required JSX
+ */
+
 const LogoHeader = (props) => (
   <svg
     className="header__logo"

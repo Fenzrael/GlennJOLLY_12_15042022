@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SelectUser.css";
 
+/**
+ * Render of Selection of User
+ * @returns {JSX|Methods React} Return of required JSX and Method React
+ */
+
 const SelectUser = () => {
   return (
     <div className="selectUser">

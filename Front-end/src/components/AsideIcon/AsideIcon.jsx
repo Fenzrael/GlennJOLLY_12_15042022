@@ -1,6 +1,11 @@
 import React from "react";
 import "./AsideIcon.css";
 
+/**
+ * Render icons Sidebar
+ * @returns {JSX} Return of required JSX
+ */
+
 const AsideIcon = () => {
   return (
     <div className="sidebar__icon container">

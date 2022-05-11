@@ -1,6 +1,11 @@
 import React from "react";
 import "./Copyright.css";
 
+/**
+ * Render enterprise info
+ * @returns {JSX} Return of required JSX
+ */
+
 const Copyright = () => {
   return (
     <div className="sidebar__copyright copyright">

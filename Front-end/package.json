@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:svg": "svgr -d components public/img"
+    "build:svg": "svgr -d components public/img",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "eslintConfig": {
     "extends": [

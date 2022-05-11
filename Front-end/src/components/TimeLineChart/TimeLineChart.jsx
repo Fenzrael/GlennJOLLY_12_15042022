@@ -1,4 +1,5 @@
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
+import PropTypes from "prop-types";
 import "./TimeLineChart.css";
 
 // tooltip personnalise permettant d'avoir la dureee des sessions en minutes fond rouge couleur blanche
@@ -10,6 +11,11 @@ const CustomToolTip = ({ active, payload }) => {
       </div>
     );
   }
+};
+
+CustomToolTip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
 };
 
 const TimeLineChart = (props) => {
@@ -48,6 +54,10 @@ const TimeLineChart = (props) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+TimeLineChart.propTypes = {
+  data: PropTypes.array,
 };
 
 export default TimeLineChart;

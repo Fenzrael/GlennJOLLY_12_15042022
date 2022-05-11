@@ -1,4 +1,14 @@
 import "./KeyDataCard.css";
+import PropTypes from "prop-types";
+
+/**
+ * Render of card which private user details
+ * @param {String} nameKeyData Name of icon.png
+ * @param {Number} count data Back-end Api  request by apiServices.js (Score %)
+ * @param {String} unity g/kcal...
+ * @param {String} type category of nutrients
+ * @returns {JSX} Return of required JSX
+ */
 
 const KeyDataCard = (props) => {
   return (
@@ -20,4 +30,10 @@ const KeyDataCard = (props) => {
   );
 };
 
+KeyDataCard.propTypes = {
+  nameKeyData: PropTypes.string,
+  count: PropTypes.number,
+  unity: PropTypes.string,
+  type: PropTypes.string,
+};
 export default KeyDataCard;

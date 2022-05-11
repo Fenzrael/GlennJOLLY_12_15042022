@@ -7,7 +7,15 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 import "./ActivityBarChart.css";
+
+/**
+ * Custom Tooltip for hover informations(kg / kcal)
+ * @param { boolean } active Boolean check hover is true or false
+ * @param { array } payload Array wich contains datas of payload
+ * @returns
+ */
 
 // custom tooltip pour la legende au survol(kg et kcal)
 const CustomTooltip = ({ active, payload }) => {
@@ -21,6 +29,17 @@ const CustomTooltip = ({ active, payload }) => {
   }
   return null;
 };
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+};
+
+/**
+ * Chart with Bars who represent wheight(kg) and physical expenditure(kcal)
+ * @param {array} data Array with relative datas
+ * @returns {JSX|Components} Return of required JSX and Components
+ */
 
 const ActivityBarChart = (props) => {
   return (
@@ -81,4 +100,7 @@ const ActivityBarChart = (props) => {
   );
 };
 
+ActivityBarChart.propTypes = {
+  data: PropTypes.array,
+};
 export default ActivityBarChart;

@@ -5,6 +5,7 @@ import "./index.css";
 
 /**
  * Js File who render all Single Page Application
+ * @author JOLLY Glenn
  */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

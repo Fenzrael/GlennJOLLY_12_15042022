@@ -15,7 +15,7 @@ import KeyDataCard from "../../components/KeyDataCard/KeyDataCard";
 
 /**
  * User Page rendered by click on the user button
- * @returns Charts for User selected and Private Details
+ * @returns Charts for User selected and Private User Details
  */
 
 const User = () => {

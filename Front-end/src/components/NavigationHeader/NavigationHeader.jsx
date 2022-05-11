@@ -2,6 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavigationHeader.css";
 
+/**
+ * Render of Navigation Links
+ * @returns {JSX|Method React-router-dom} Return of required JSX and methods
+ */
+
 const NavigationHeader = () => {
   return (
     <ul className="header__nav nav">

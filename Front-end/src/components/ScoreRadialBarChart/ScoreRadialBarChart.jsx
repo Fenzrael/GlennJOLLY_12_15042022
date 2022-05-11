@@ -1,5 +1,13 @@
 import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
+import PropTypes from "prop-types";
 import "./ScoreRadialBarChart.css";
+
+/**
+ * Chart with circular Bar who represent Final User Score
+ * @param {Number} data Number with relative datas
+ * @param {String} percentage String represent property "todayScore" multiply by 100(%)
+ * @returns {JSX|Components} Return of required JSX and Components
+ */
 
 const ScoreRadialBarChart = (props) => {
   return (
@@ -30,6 +38,11 @@ const ScoreRadialBarChart = (props) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+ScoreRadialBarChart.propTypes = {
+  data: PropTypes.number,
+  percentage: PropTypes.string,
 };
 
 export default ScoreRadialBarChart;

@@ -6,7 +6,15 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 import "./ExerciceRadarChart.css";
+
+/**
+ *
+ * RadarChart with Hexagon who represent different datas of User activities
+ * @param {Array} data Array of Objects with relative datas
+ * @returns {JSX|Components} Return of required JSX and Components
+ */
 
 const ExerciceRadarChart = (props) => {
   return (
@@ -19,6 +27,7 @@ const ExerciceRadarChart = (props) => {
           endAngle={210}
           data={props.data}
         >
+          {/* {console.log(props.data)} */}
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"
@@ -44,6 +53,10 @@ const ExerciceRadarChart = (props) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+ExerciceRadarChart.propTypes = {
+  data: PropTypes.array,
 };
 
 export default ExerciceRadarChart;
